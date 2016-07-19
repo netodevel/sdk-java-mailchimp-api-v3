@@ -1,31 +1,11 @@
 package mailchimp.attributes;
 
-//TODO: alterar nomeclatura dos atributos
 public class CampaignDefaults {
 
-	private String from_name;
-	
-	private String from_email;
-	
+	private String fromName;
+	private String fromEmail;
 	private String subject;
-
 	private String language;
-
-	public String getFrom_name() {
-		return from_name;
-	}
-
-	public void setFrom_name(String from_name) {
-		this.from_name = from_name;
-	}
-
-	public String getFrom_email() {
-		return from_email;
-	}
-
-	public void setFrom_email(String from_email) {
-		this.from_email = from_email;
-	}
 
 	public String getSubject() {
 		return subject;
@@ -41,6 +21,22 @@ public class CampaignDefaults {
 
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+
+	public String getFromName() {
+		return fromName;
+	}
+
+	public void setFromName(String fromName) {
+		this.fromName = fromName;
+	}
+
+	public String getFromEmail() {
+		return fromEmail;
+	}
+
+	public void setFromEmail(String fromEmail) {
+		this.fromEmail = fromEmail;
 	}
 	
 }

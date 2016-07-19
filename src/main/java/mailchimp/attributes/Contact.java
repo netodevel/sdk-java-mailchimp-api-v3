@@ -3,19 +3,12 @@ package mailchimp.attributes;
 public class Contact {
 
 	private String company;
-	
 	private String address1;
-	
 	private String address2;
-	
 	private String city;
-	
 	private String state;
-	
 	private String zip;
-	
 	private String country;
-	
 	private String fone;
 
 	public String getCompany() {

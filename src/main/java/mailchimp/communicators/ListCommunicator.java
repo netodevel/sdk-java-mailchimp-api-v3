@@ -4,6 +4,7 @@ import mailchimp.attributes.ListMailChimp;
 import feign.Param;
 import feign.RequestLine;
 
+//TODO: EDIT E DELETE
 public interface ListCommunicator {
 	
 	@RequestLine("GET /lists")

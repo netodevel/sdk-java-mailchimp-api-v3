@@ -2,8 +2,10 @@ package mailchimp;
 
 import mailchimp.attributes.Authentication;
 import mailchimp.clients.ListClient;
+import mailchimp.clients.MemberClient;
 import mailchimp.communicators.Communicator;
 import mailchimp.communicators.ListCommunicator;
+import mailchimp.communicators.MemberCommunicator;
 
 public class MailChimp {
 
@@ -15,13 +17,14 @@ public class MailChimp {
 		this.communicator = communicator;
 	}
 	
-	/**
-	 * Implementação de Lists
-	 * @return
-	 */
 	public ListClient list() {
 		ListCommunicator listCommunicator = communicator.build(ListCommunicator.class, authentication);
 		return new ListClient(listCommunicator);
+	}
+	
+	public MemberClient member() {
+		MemberCommunicator memberCommunicator = communicator.build(MemberCommunicator.class, authentication);
+		return new MemberClient(memberCommunicator);
 	}
 	
 }

@@ -3,7 +3,6 @@ package mailchimp.attributes;
 public class Authentication {
 
 	private String secret;
-
 	private String token;
 
 	public Authentication(final String token, final String secret) {

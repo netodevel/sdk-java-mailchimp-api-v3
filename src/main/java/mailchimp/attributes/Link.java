@@ -1,15 +1,11 @@
 package mailchimp.attributes;
 
-public class Links {
+public class Link {
 
 	private String rel;
-	
 	private String href;
-	
 	private String method;
-	
 	private String targetSchema;
-	
 	private String schema;
 
 	public String getRel() {
