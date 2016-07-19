@@ -11,8 +11,8 @@ public class Member {
     private String emailType;
     private String status;
     private String statusIfNew;
-    private MergeFields mergeFields;
-    private Interests interests;
+    private MergeFields mergeFields; //TODO: não está vindo carregado
+    private Interests interests; //TODO: não está vindo carregado
     private Stats stats;
     private String ipSignup;
     private String timestampSignup;

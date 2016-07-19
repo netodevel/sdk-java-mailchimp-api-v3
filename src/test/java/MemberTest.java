@@ -1,21 +1,20 @@
+import static org.junit.Assert.assertEquals;
+
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 import mailchimp.MailChimp;
 import mailchimp.attributes.Authentication;
 import mailchimp.attributes.Member;
-import mailchimp.attributes.MergeFields;
 import mailchimp.communicators.ProductionCommunicator;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 public class MemberTest {
 
-	private static final String USER = "";
-	private static final String KEY = "";
+	private static final String USER = "Jose vieira";
+	private static final String KEY = "9fefd9702d24ac6762b2cbfe69c2238a-us11";
 	
 	@Test
 	public void testReadAllMembersNotBeIsEmpty() {
@@ -42,10 +41,9 @@ public class MemberTest {
 		String email = "gleopardi98@hotmail.com";
 		
 		Member memberToUpdate = mailChimp.member().readOne(idList, email);
-		MergeFields mergeFields = new MergeFields("José","Neto");
-		memberToUpdate.setMergeFields(mergeFields);
-
-		Member memberUpdated = mailChimp.member().update(idList, memberToUpdate.getEmailAddress(), memberToUpdate);
+		memberToUpdate.setIpOpt("192.168.0.28");
+		
+		Member memberUpdated = mailChimp.member().update(idList, email, memberToUpdate);
 		Assert.assertNotNull("Should not be null", memberUpdated);
 	}
 	
