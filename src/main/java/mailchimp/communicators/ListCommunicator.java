@@ -4,7 +4,7 @@ import mailchimp.attributes.ListMailChimp;
 import feign.Param;
 import feign.RequestLine;
 
-//TODO: EDIT E DELETE
+//TODO: EDIT and Count Lists
 public interface ListCommunicator {
 	
 	@RequestLine("GET /lists")
@@ -16,4 +16,6 @@ public interface ListCommunicator {
 	@RequestLine("POST /lists")
 	ListMailChimp create(ListMailChimp listMailChimp);
 
+	@RequestLine("DELETE /lists/{list_id}")
+	void delete(@Param("list_id") String listId);
 }

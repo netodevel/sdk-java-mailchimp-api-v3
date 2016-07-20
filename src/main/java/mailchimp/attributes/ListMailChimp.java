@@ -2,7 +2,6 @@ package mailchimp.attributes;
 
 import java.util.List;
 
-//TODO: alterar nomeclatura dos atributos
 public class ListMailChimp {
 
 	private String id;

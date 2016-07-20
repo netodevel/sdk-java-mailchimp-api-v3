@@ -1,9 +1,13 @@
 package mailchimp.attributes;
 
+import com.google.gson.annotations.SerializedName;
 
 public class MergeFields {
 
+	@SerializedName("FNAME")
     private String fNAME;
+	
+	@SerializedName("LNAME")
     private String lNAME;
 
     /**

@@ -13,9 +13,15 @@ public interface MemberCommunicator {
 	Member count(@Param("list_id") String listId);
 	
 	@RequestLine("GET /lists/{list_id}/members/{subscriber_hash}")
-	Member readOne(@Param("list_id") String idList, @Param("subscriber_hash") String subscriber_hash);
+	Member readOne(@Param("list_id") String idList, @Param("subscriber_hash") String subscriberHash);
 
 	@RequestLine("PUT /lists/{list_id}/members/{subscriber_hash}")
 	Member update(@Param("list_id") String idList, @Param("subscriber_hash") String subscriberHash, Member member);
+
+	@RequestLine("DELETE /lists/{list_id}/members/{subscriber_hash}")
+	void delete(@Param("list_id") String idList, @Param("subscriber_hash") String subscriberHash);
+	
+	@RequestLine("POST /lists/{list_id}/members")
+	Member create(@Param("list_id") String idList, Member members);
 	
 }

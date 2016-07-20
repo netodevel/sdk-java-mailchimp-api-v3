@@ -1,11 +1,18 @@
 package mailchimp.attributes;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Interests {
 
+	@SerializedName("9143cf3bd1")
     private Boolean _9143cf3bd1;
+	@SerializedName("3a2a927344")
     private Boolean _3a2a927344;
+	@SerializedName("f9c8f5f0ff")
     private Boolean f9c8f5f0ff;
+	@SerializedName("f231b09abc")
     private Boolean f231b09abc;
+	@SerializedName("bd6e66465f")
     private Boolean bd6e66465f;
 
     /**

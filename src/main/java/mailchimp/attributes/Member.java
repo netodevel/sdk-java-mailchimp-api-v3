@@ -3,6 +3,8 @@ package mailchimp.attributes;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Member {
 
     private String id;
@@ -11,8 +13,13 @@ public class Member {
     private String emailType;
     private String status;
     private String statusIfNew;
-    private MergeFields mergeFields; //TODO: não está vindo carregado
+    
+    @SerializedName("merge_fields")
+    private MergeFields mergeFields;
+    
+    @SerializedName("interests")
     private Interests interests; //TODO: não está vindo carregado
+    
     private Stats stats;
     private String ipSignup;
     private String timestampSignup;

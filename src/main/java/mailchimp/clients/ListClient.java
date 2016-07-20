@@ -29,5 +29,9 @@ public class ListClient {
 	public ListMailChimp create(ListMailChimp listMailChimp) {
 		return listCommunicator.create(listMailChimp);
 	}
+
+	public void delete(String id) {
+		listCommunicator.delete(id);
+	}
 	
 }

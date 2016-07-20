@@ -39,5 +39,14 @@ public class MemberClient {
 		Member memberUpdated = memberCommunicator.update(idList, subscriberHash, member);
 		return memberUpdated;
 	}
+
+	public void delete(String idList, String email) throws NoSuchAlgorithmException {
+		String subscriberHash = GenerateMD5.stringToMd5(email);
+		memberCommunicator.delete(idList, subscriberHash);
+	}
+
+	public Member create(String idList, Member members) {
+		return memberCommunicator.create(idList, members);
+	}
 	
 }
