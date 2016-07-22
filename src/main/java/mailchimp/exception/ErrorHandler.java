@@ -25,7 +25,8 @@ public class ErrorHandler implements ErrorDecoder {
 			String json = s.hasNext() ? s.next() : "";
 			GsonDeserializer gson = new GsonDeserializer();
 			ApiResponseError error = gson.deserialize(json, ApiResponseError.class);
-			throw new ApiResponseErrorException(error);
+			
+			return new ApiResponseErrorException(error.getDetail());
 		} catch (IOException e) {
 			System.out.println("Error when parsin response" + e);
 		}

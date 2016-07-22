@@ -1,26 +1,43 @@
 package mailchimp.exception;
 
-import java.util.List;
-
-import mailchimp.attributes.Alerts;
-import mailchimp.attributes.Errors;
-
 
 public class ApiResponseError {
-	private List<Alerts> alerts;
-	private List<Errors> errors;
-	private String message;
 
-	public List<Alerts> getAlerts() {
-		return alerts;
+	private String title;
+	private String status;
+	private String detail;
+	private String instance;
+
+	public String getTitle() {
+		return title;
 	}
 
-	public List<Errors> getErrors() {
-		return errors;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getStatus() {
+		return status;
 	}
-	
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getDetail() {
+		return detail;
+	}
+
+	public void setDetail(String detail) {
+		this.detail = detail;
+	}
+
+	public String getInstance() {
+		return instance;
+	}
+
+	public void setInstance(String instance) {
+		this.instance = instance;
+	}
+
 }
