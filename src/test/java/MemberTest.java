@@ -19,8 +19,8 @@ import org.junit.Test;
 
 public class MemberTest {
 
-	private static final String USER = "";
-	private static final String KEY = "";
+	private static final String USER = "Jose vieira";
+	private static final String KEY = "9fefd9702d24ac6762b2cbfe69c2238a-us11";
 
 	private static ListMailChimp listMailChimpToCreated;
 	private static Member memberCreated;
@@ -37,7 +37,7 @@ public class MemberTest {
 		Contact contact = new Contact();
 		contact.setAddress1("rua");
 		contact.setAddress2("J");
-		contact.setCity("Maceió");
+		contact.setCity("Maceio");
 		contact.setCompany("SED");
 		contact.setCountry("Brazil");
 		contact.setFone("3333-3333");
@@ -50,7 +50,7 @@ public class MemberTest {
 		Member members = new Member();
 		members.setEmailAddress("josevieira.dev@gmail.com");
 		members.setStatus("subscribed");
-		MergeFields mergeField = new MergeFields("José", "neto");
+		MergeFields mergeField = new MergeFields("Jose", "neto");
 		members.setMergeFields(mergeField);
 		memberCreated = mailChimp.member().create(listMailChimpToCreated.getId(), members);
 	}
@@ -86,10 +86,16 @@ public class MemberTest {
 	}
 	
 	@AfterClass
-	public static void testeDeleteAll() throws NoSuchAlgorithmException {
+	public static void testeDeleteAll() {
 		String idList = listMailChimpToCreated.getId();
-		String email = memberCreated.getEmailAddress(); 
-		mailChimp.member().delete(idList, email);
+		String email = memberCreated.getEmailAddress();
+		
+		try {
+			mailChimp.member().delete(idList, email);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 		mailChimp.list().delete(idList);
 	}
 
