@@ -29,19 +29,19 @@ public class MemberClient {
 	}
 
 	public Member readOne(String idList, String email) throws NoSuchAlgorithmException {
-		String subscriberHash = GenerateMD5.stringToMd5(email);
+		String subscriberHash = GenerateMD5.stringToMd5(email.toLowerCase());
 		Member member = memberCommunicator.readOne(idList, subscriberHash);
 		return member;
 	}
 
 	public Member update(String idList, String email, Member member) throws NoSuchAlgorithmException {
-		String subscriberHash = GenerateMD5.stringToMd5(email);
+		String subscriberHash = GenerateMD5.stringToMd5(email.toLowerCase());
 		Member memberUpdated = memberCommunicator.update(idList, subscriberHash, member);
 		return memberUpdated;
 	}
 
-	public void delete(String idList, String email) throws NoSuchAlgorithmException {
-		String subscriberHash = GenerateMD5.stringToMd5(email);
+	public void delete(String idList, String email) throws Exception {
+		String subscriberHash = GenerateMD5.stringToMd5(email.toLowerCase());
 		memberCommunicator.delete(idList, subscriberHash);
 	}
 

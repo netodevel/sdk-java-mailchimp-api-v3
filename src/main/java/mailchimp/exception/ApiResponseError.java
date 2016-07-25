@@ -1,6 +1,5 @@
 package mailchimp.exception;
 
-
 public class ApiResponseError {
 
 	private String title;
