@@ -19,8 +19,8 @@ import org.junit.Test;
 
 public class MemberTest {
 
-	private static final String USER = "Jose vieira";
-	private static final String KEY = "9fefd9702d24ac6762b2cbfe69c2238a-us11";
+	private static final String USER = "";
+	private static final String KEY = "";
 
 	private static ListMailChimp listMailChimpToCreated;
 	private static Member memberCreated;

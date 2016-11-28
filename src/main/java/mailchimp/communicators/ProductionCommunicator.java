@@ -30,7 +30,7 @@ public class ProductionCommunicator implements Communicator {
                 .errorDecoder(new mailchimp.exception.ErrorHandler()) 
                 .requestInterceptor(new BasicAuthRequestInterceptor(authentication.getToken(), authentication.getSecret()))
                 .requestInterceptor(new FixedHeadersInterceptor()) // adicão de Headers para todos os pedidos
-                .logger(new Logger.JavaLogger().appendToFile("C:\\Users\\Jose\\Desktop\\openSource-Projects\\http.log"))
+               // .logger(new Logger.JavaLogger().appendToFile("C:\\Users\\Jose\\Desktop\\openSource-Projects\\http.log"))
                 .logLevel(Logger.Level.FULL)
                 .encoder(new GsonEncoder(gson)) 
                 .target(clazz, "https://us11.api.mailchimp.com/3.0");
