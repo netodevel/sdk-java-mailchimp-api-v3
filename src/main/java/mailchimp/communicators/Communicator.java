@@ -1,6 +1,7 @@
 package mailchimp.communicators;
 
 import mailchimp.attributes.Authentication;
+import mailchimp.attributes.DataCenterMailChimp;
 
 /**
  * 
@@ -9,6 +10,6 @@ import mailchimp.attributes.Authentication;
  */
 public interface Communicator {
 
-	public <T> T build(final Class<T> clazz, final Authentication authentication);
+	public <T> T build(final Class<T> clazz, final Authentication authentication, DataCenterMailChimp dataCenterMailChimp);
 
 }

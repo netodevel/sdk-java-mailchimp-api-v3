@@ -6,6 +6,7 @@ import mailchimp.MailChimp;
 import mailchimp.attributes.Authentication;
 import mailchimp.attributes.CampaignDefaults;
 import mailchimp.attributes.Contact;
+import mailchimp.attributes.DataCenterMailChimp;
 import mailchimp.attributes.ListMailChimp;
 import mailchimp.communicators.ProductionCommunicator;
 
@@ -19,7 +20,7 @@ public class ListsMailChimpTest {
 	private static final String USER = "";
 	private static final String KEY = "";
 	private static ListMailChimp listMailChimp;
-	private static MailChimp mailChimp = new MailChimp(new Authentication(USER,KEY), new ProductionCommunicator());
+	private static MailChimp mailChimp = new MailChimp(new Authentication(USER, KEY), new ProductionCommunicator(), new DataCenterMailChimp("11"));
 	
 	@BeforeClass
 	public static void init() {
