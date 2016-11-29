@@ -15,16 +15,16 @@ is a library in MailChimp development built in Java to consume the api 3.0 MailC
 <b>Documentation:</b> http://developer.mailchimp.com/documentation/mailchimp/reference/overview/
 
 ##Install
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-		
-		<dependency>
-		    <groupId>com.github.NetoDevel</groupId>
-		    <artifactId>mailchimp-java</artifactId>
-		    <version>0.1</version>
-		</dependency>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+
+	<dependency>
+	    <groupId>com.github.NetoDevel</groupId>
+	    <artifactId>mailchimp-java</artifactId>
+	    <version>0.1</version>
+	</dependency>
 
 
 
@@ -34,25 +34,26 @@ is a library in MailChimp development built in Java to consume the api 3.0 MailC
 
 Simple use to create a list.
 
-		MailChimp mailChimp = new MailChimp(new Authentication(YOURUSER, YOURKEY), new ProductionCommunicator());
-		ListMailChimp listMailChimp = new ListMailChimp().withEmailTypeOption(true).withName("Test Name")
-		                                   .withPermissionReminder("Testing")
-										   .withCampaignDefault(campaignDefaults).withContact(contact);
-		listMailChimpToCreated = mailChimp.list().create(listMailChimp);
+	MailChimp mailChimp = new MailChimp(new Authentication(YOURUSER, YOURKEY), new ProductionCommunicator(),
+						new DataCenterMailChimp("13"));
+	ListMailChimp listMailChimp = new ListMailChimp().withEmailTypeOption(true).withName("Test Name")
+					  		 .withPermissionReminder("Testing")
+						   	 .withCampaignDefault(campaignDefaults).withContact(contact);
+	listMailChimpToCreated = mailChimp.list().create(listMailChimp);
 
 Create a member
 
-		Member members = new Member();
-		members.setEmailAddress("EMAIL_ADRESS");
-		members.setStatus("subscribed");
-		MergeFields mergeField = new MergeFields("FNAME", "LNAME");
-		members.setMergeFields(mergeField);
-	
-		memberCreated = mailChimp.member().create(listMailChimpToCreated.getId(), members);
+	Member members = new Member();
+	members.setEmailAddress("EMAIL_ADRESS");
+	members.setStatus("subscribed");
+	MergeFields mergeField = new MergeFields("FNAME", "LNAME");
+	members.setMergeFields(mergeField);
+
+	memberCreated = mailChimp.member().create(listMailChimpToCreated.getId(), members);
 
 
 ##Create by 
 
- 	SED - 2016(http://www.sedengenharia.com.br/)
+ 	SED - 2016 (http://www.sedengenharia.com.br/)
 
 
