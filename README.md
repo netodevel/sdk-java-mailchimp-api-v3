@@ -1,8 +1,8 @@
 [![](https://jitpack.io/v/NetoDevel/mailchimp-java.svg)](https://jitpack.io/#NetoDevel/mailchimp-java)
 
 
-# Mailchimp Api V3 Java
-MailChimp API v3.0 wrapper for Java
+# SDK Java Mailchimp Api V3 
+MailChimp API v3.0 
 
 #### About
 It is a library for consuming the api v3 from mailchimp built in java.
