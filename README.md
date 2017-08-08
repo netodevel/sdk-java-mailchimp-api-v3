@@ -7,18 +7,18 @@ MailChimp API v3.0
 #### About
 It is a library for consuming the api v3 from mailchimp built in java. This library makes it easy to integrate with java projects.
 
-###Alert
+### Alert
 In development. Help us! Make a fork!
 
-##Features implemented
+## Features implemented
   * List
   * Members
 
-##TODO
+## TODO
 
 [Documentation](http://developer.mailchimp.com/documentation/mailchimp/reference/overview/)
 	
-##Install
+## Install
 ```xml
 	<repository>
 	    <id>jitpack.io</id>
@@ -33,7 +33,7 @@ In development. Help us! Make a fork!
 ```
 
 
-##Usage
+## Usage
 
 Simple use to create a list.
 ```java
@@ -57,12 +57,12 @@ Create a member
 	memberCreated = mailChimp.member().create(listMailChimpToCreated.getId(), members);
 ```
 
-##Create by 
+## Create by 
 
 [SED](http://www.sedengenharia.com.br/)	
 
 
-###License
+### License
 
 	The MIT License (MIT)
 
