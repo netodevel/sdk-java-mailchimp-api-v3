@@ -28,7 +28,7 @@ In development. Help us! Make a fork!
 	<dependency>
 	    <groupId>com.github.NetoDevel</groupId>
 	    <artifactId>mailchimp-java</artifactId>
-	    <version>0.1.4</version>
+	    <version>0.1.5</version>
 	</dependency>
 ```
 
